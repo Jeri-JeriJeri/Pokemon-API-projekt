@@ -1,37 +1,71 @@
+/* KVAR ATT GÖRA::
+Centrera Knapparna,
+Färg
+Splice så att Namn och Type börjar med Stora bokstäver
+*/
+
+* {
+  box-sizing: border-box;
+}
+body {
+  padding: 0;
+  margin: 0;
+}
 h1 {
   text-align: center;
 }
 .start-knapp {
 
 }
+.pokemon-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 .pokemon-information {
   display: grid;
-  grid-template-columns: repeat(5, fit-content);
   grid-template-rows: 1fr, 1fr;
   grid-template-areas: 
   "pic name type height weight" "pic name type height weight"
   ;
+  text-align: center;
+  
+  align-items: center;
 }
 
 .pokemon-information img {
   grid-area: pic;
   grid-row: 2;
+  width: 70px;
+  height: 70px;
+  justify-self: center;
 }
 .pokemon-information h3 {
   grid-area: name;
   grid-row: 2;
 }
 
-.height {
+#height {
   grid-area: height ;
   grid-row: 2;
 }
 .pokemon-information ul {
   grid-area: type;
   grid-row: 2;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
-.weight {
+#weight {
   grid-area: weight;
   grid-row:2;
+}
+.info {
+font-size: 1.2rem;
+}
+.rubrik-info {
+  font-size: 1.5rem;
+
 }

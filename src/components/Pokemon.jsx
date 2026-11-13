@@ -1,21 +1,32 @@
 function Pokemon ({props}) {
 
-    return (
+    return ( <>
+            <div className="pokemon-image">
+                <h2>Bild på {props.name}</h2>
+                <img src={props.sprites.other.dream_world.front_default} alt={`Bild på ${props.name}`} />
+            </div>
         <div className="pokemon-information">
-            <h3> {props.name} </h3>
+           <h4 className="rubrik-img rubrik-info">Appearance</h4>
+           <h4 className="rubrik-name rubrik-info" >Name</h4>
+           <h4 className="rubrik-type rubrik-info">Type</h4>
+           <h4 className="rubrik-height rubrik-info">Height</h4>
+           <h4 className="rubrik-weight rubrik-info">Weight</h4>
+           
+            <h3 className="info"> {props.name} </h3>
             
             {/* Vikten och löngden i PokeAPI mäts i hektogram och decimeter */}
-            <p className="weight">{` Weight: ${Number(props.weight) / 10}kg` }</p>
+            <span id="weight" className="info">{Number(props.weight) / 10}kg</span>
+           
+            <span id="height" className="info"> {Number(props.height) / 10}m</span>
             
-            <img src={props.sprites.other.showdown.front_default} alt={`Animerade GIF av ${props.name}`}  />
-            {console.log(props.sprites.front_default)}
+            <img src={props.sprites.other.showdown.front_default} className="info" alt={`Animerade GIF av ${props.name}`}  />
             
-            <ul>
-            {props.types.map(item => <li key={item.slot}>{item.type.name}</li>)}
+            <ul className="info">
+            {props.types.map((item, i) => <li className="type" key={item.slot}>{i + 1}. {item.type.name}</li>)}
 
             </ul>
-            <p className="height"> {`Height: ${Number(props.height) / 10}m`}</p>
         </div>
+    </>
     )
 }
 export default Pokemon
