@@ -1,5 +1,4 @@
 /* KVAR ATT GÖRA::  
-Footer
 Animation till table
 */
 
@@ -11,7 +10,20 @@ body {
   margin: 0;
   background-color: #B9C9AE;
   color: #2A3230;
+  height: 100dvh;
 }
+
+/* #root skapas automatisk i main.jsx */
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+  
+}
+main {
+  flex: 1;
+}
+
 select, button {
   background-color: #2A3230;
   color: #cad6c2;
@@ -40,6 +52,7 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 2rem;
   
 }
 
@@ -103,6 +116,8 @@ footer {
   color: #cad6c2;
   border-radius: 20px 20px 0 0;
   font-size: 1.2rem;
+  
+  
 }
 footer a {
   color: #cad6c2;
