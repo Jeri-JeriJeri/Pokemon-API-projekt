@@ -4,6 +4,10 @@ import Pokemon from "./Pokemon";
 function PokemonApplication ({pokemon}) {
 const [selectedPokemon, setSelectedPokemon] = useState("")
 const [pokemonData, setPokemonData] = useState(null)
+
+/* ####
+Use effect??? 
+###########*/
 const getUrl = async () => {
     const res = await fetch(selectedPokemon);
     const json = await res.json(); 

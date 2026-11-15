@@ -1,5 +1,5 @@
-/* KVAR ATT GÖRA::
-Färg
+/* KVAR ATT GÖRA::  
+Footer
 Animation till table
 */
 
@@ -9,6 +9,15 @@ Animation till table
 body {
   padding: 0;
   margin: 0;
+  background-color: #B9C9AE;
+  color: #2A3230;
+}
+select, button {
+  background-color: #2A3230;
+  color: #cad6c2;
+  padding: 0.3rem;
+  border-radius: 8px;
+  border: 2px solid black;
 }
 h1 {
   text-align: center;
@@ -31,6 +40,7 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  
 }
 
 .pokemon-information {
@@ -39,16 +49,19 @@ h1 {
   grid-template-areas: 
   "pic name type height weight" "pic name type height weight"
   ;
-  text-align: center;
-  
+  justify-items: center;
   align-items: center;
+  background-color: #2A3230;
+  margin: 0 1rem;
+  border-radius: 15px;
+  color: #cad6c2;
 }
 
 .pokemon-information img {
   grid-area: pic;
   grid-row: 2;
-  width: 70px;
-  height: 70px;
+  width: 80px;
+  height: 80px;
   justify-self: center;
 }
 .pokemon-information h3 {
