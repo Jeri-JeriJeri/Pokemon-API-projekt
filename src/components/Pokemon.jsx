@@ -2,7 +2,7 @@ function Pokemon ({props}) {
 
     return ( <>
             <div className="pokemon-image">
-                <h2>Bild på {props.name}</h2>
+                <h2>{props.name}</h2>
                 <img src={props.sprites.other.dream_world.front_default} alt={`Bild på ${props.name}`} />
             </div>
         <div className="pokemon-information">

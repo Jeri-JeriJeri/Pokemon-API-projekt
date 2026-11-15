@@ -1,7 +1,8 @@
 /* KVAR ATT GÖRA::
 Centrera Knapparna,
-Färg
 Splice så att Namn och Type börjar med Stora bokstäver
+Färg
+Animation till table
 */
 
 * {
@@ -15,7 +16,17 @@ h1 {
   text-align: center;
 }
 .start-knapp {
-
+  display: flex;
+  justify-self: center;
+}
+.pokemon-application {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center ;
+}
+.pokemon-application select {
+  margin: 1rem 0;
 }
 .pokemon-image {
   display: flex;

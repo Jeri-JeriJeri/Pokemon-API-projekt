@@ -26,7 +26,7 @@ useEffect(
     </header>
     <main>
       
-      <button className='start-knapp' onClick={() => setShow(!show)}>Start Pokemon App</button>
+      <button className='start-knapp' onClick={() => setShow(!show)}>{show ? "Close" : "Start"} Pokemon App</button>
 
     {show && <PokemonApplication pokemon={pokemon}/>}
       </main>
