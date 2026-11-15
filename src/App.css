@@ -1,4 +1,5 @@
 /* KVAR ATT GÖRA::  
+Knapp hover
 Animation till table
 */
 
@@ -24,6 +25,10 @@ main {
   flex: 1;
 }
 
+h1 {
+  text-align: center;
+}
+
 select, button {
   background-color: #2A3230;
   color: #cad6c2;
@@ -31,13 +36,22 @@ select, button {
   border-radius: 8px;
   border: 2px solid black;
 }
-h1 {
-  text-align: center;
-}
 .start-knapp {
   display: flex;
   justify-self: center;
 }
+button {
+  transition: padding 0.5s ease, border-radius 0.5s ease;
+
+}
+button:hover {
+  padding: 0.6rem;
+  border-radius: 20px;
+}
+button:active {
+  transform: translateY(7px);
+}
+
 .pokemon-application {
   display: flex;
   justify-content: center;
@@ -53,6 +67,8 @@ h1 {
   justify-content: center;
   align-items: center;
   margin-bottom: 2rem;
+  opacity: 0;
+  animation: pokemon 1s forwards;
   
 }
 
@@ -68,6 +84,8 @@ h1 {
   margin: 0 2rem 1rem;
   border-radius: 15px;
   color: #cad6c2;
+  opacity: 0;
+  animation: pokemon 1s  0.5s   forwards;
 }
 
 .pokemon-information img {
@@ -98,12 +116,12 @@ h1 {
   grid-row:2;
 }
 .info {
-font-size: 1.2rem;
-
+  font-size: 1.2rem;
+  
 }
 .rubrik-info {
   font-size: 1.5rem;
-
+  
 }
 #pokemon-bild {
   width: 15%;
@@ -131,4 +149,10 @@ footer a:hover {
   display: flex;
   justify-content: space-between;
   padding: 1rem 2rem;
+}
+
+/* Animation */
+@keyframes pokemon {
+  0% {opacity: 0%;}
+  100%{opacity: 1;}
 }
