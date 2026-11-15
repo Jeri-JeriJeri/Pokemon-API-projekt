@@ -1,6 +1,4 @@
 /* KVAR ATT GÖRA::
-Centrera Knapparna,
-Splice så att Namn och Type börjar med Stora bokstäver
 Färg
 Animation till table
 */
@@ -79,4 +77,8 @@ font-size: 1.2rem;
 .rubrik-info {
   font-size: 1.5rem;
 
+}
+#pokemon-bild {
+  width: 15%;
+  height: 15%;
 }
