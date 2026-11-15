@@ -10,7 +10,7 @@ const getUrl = async () => {
      setPokemonData(json)    
 }
     return (
-        <div>
+        <div className="pokemon-application">
             <h2>Välj din Pokemon</h2>
 
             <select onChange={(e) => setSelectedPokemon(e.target.value)}>
@@ -21,7 +21,9 @@ const getUrl = async () => {
             </select>
                 <button onClick={getUrl}>Show info:</button>
                 
-                {pokemonData && <Pokemon props={pokemonData}/>}
+                {pokemonData && 
+                
+                <Pokemon props={pokemonData}/>}
                 
             
         </div>
