@@ -115,12 +115,15 @@ button:active {
   grid-area: weight;
   grid-row:2;
 }
+.info, .rubrik-info{
+  margin: 0.5rem 0;
+}
 .info {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   
 }
 .rubrik-info {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   
 }
 #pokemon-bild {
