@@ -1,7 +1,5 @@
-/* KVAR ATT GÖRA::
-Centrera Knapparna,
-Färg
-Splice så att Namn och Type börjar med Stora bokstäver
+/* KVAR ATT GÖRA::  
+Animation till table
 */
 
 * {
@@ -10,18 +8,52 @@ Splice så att Namn och Type börjar med Stora bokstäver
 body {
   padding: 0;
   margin: 0;
+  background-color: #B9C9AE;
+  color: #2A3230;
+  height: 100dvh;
+}
+
+/* #root skapas automatisk i main.jsx */
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+  
+}
+main {
+  flex: 1;
+}
+
+select, button {
+  background-color: #2A3230;
+  color: #cad6c2;
+  padding: 0.3rem;
+  border-radius: 8px;
+  border: 2px solid black;
 }
 h1 {
   text-align: center;
 }
 .start-knapp {
-
+  display: flex;
+  justify-self: center;
+}
+.pokemon-application {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center ;
+}
+.pokemon-application select {
+  margin: 1rem 0;
 }
 .pokemon-image {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 2rem;
+  
 }
 
 .pokemon-information {
@@ -30,16 +62,19 @@ h1 {
   grid-template-areas: 
   "pic name type height weight" "pic name type height weight"
   ;
-  text-align: center;
-  
+  justify-items: center;
   align-items: center;
+  background-color: #2A3230;
+  margin: 0 2rem 1rem;
+  border-radius: 15px;
+  color: #cad6c2;
 }
 
 .pokemon-information img {
   grid-area: pic;
   grid-row: 2;
-  width: 70px;
-  height: 70px;
+  width: 80px;
+  height: 80px;
   justify-self: center;
 }
 .pokemon-information h3 {
@@ -64,8 +99,36 @@ h1 {
 }
 .info {
 font-size: 1.2rem;
+
 }
 .rubrik-info {
   font-size: 1.5rem;
 
+}
+#pokemon-bild {
+  width: 15%;
+  height: 15%;
+}
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  background-color: #2A3230;
+  color: #cad6c2;
+  border-radius: 20px 20px 0 0;
+  font-size: 1.2rem;
+  
+  
+}
+footer a {
+  color: #cad6c2;
+  
+}
+footer a:hover {
+  text-decoration: none;
+}
+.kontakt {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
 }
