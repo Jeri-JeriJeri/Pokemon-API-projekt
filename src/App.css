@@ -67,6 +67,8 @@ button:active {
   justify-content: center;
   align-items: center;
   margin-bottom: 2rem;
+  opacity: 0;
+  animation: pokemon 1s forwards;
   
 }
 
@@ -82,6 +84,8 @@ button:active {
   margin: 0 2rem 1rem;
   border-radius: 15px;
   color: #cad6c2;
+  opacity: 0;
+  animation: pokemon 1s  0.5s   forwards;
 }
 
 .pokemon-information img {
@@ -112,12 +116,12 @@ button:active {
   grid-row:2;
 }
 .info {
-font-size: 1.2rem;
-
+  font-size: 1.2rem;
+  
 }
 .rubrik-info {
   font-size: 1.5rem;
-
+  
 }
 #pokemon-bild {
   width: 15%;
@@ -145,4 +149,10 @@ footer a:hover {
   display: flex;
   justify-content: space-between;
   padding: 1rem 2rem;
+}
+
+/* Animation */
+@keyframes pokemon {
+  0% {opacity: 0%;}
+  100%{opacity: 1;}
 }
