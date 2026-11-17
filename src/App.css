@@ -1,12 +1,7 @@
-/* KVAR ATT GÖRA::  
-Media queries för mobile och Tablett
-
-Use effect i pokemonapplication
-*/
-
 * {
   box-sizing: border-box;
 }
+
 body {
   padding: 0;
   margin: 0;
@@ -20,8 +15,9 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100dvh;
-  
+
 }
+
 main {
   flex: 1;
 }
@@ -30,19 +26,26 @@ h1 {
   font-size: 3rem;
   text-align: center;
 }
+
 h2 {
   font-size: 2.25rem;
 }
+
 h3 {
   font-size: 1.75rem;
 }
+
 h4 {
   font-size: 1.5rem;
 }
-p {font-size: 1.25rem;}
+
+p {
+  font-size: 1.25rem;
+}
 
 
-select, button {
+select,
+button {
   background-color: #2A3230;
   color: #cad6c2;
   padding: 0.3rem;
@@ -50,6 +53,7 @@ select, button {
   border: 2px solid black;
   font-size: 1rem;
 }
+
 .start-knapp {
   display: flex;
   justify-self: center;
@@ -58,12 +62,14 @@ select, button {
 button {
   transition: padding 0.7s ease, border-radius 0.7s ease;
 
-  
+
 }
+
 button:hover {
   padding: 0.6rem;
   border-radius: 20px;
 }
+
 button:active {
   transform: translateY(7px);
 }
@@ -72,11 +78,13 @@ button:active {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  align-items: center ;
+  align-items: center;
 }
+
 .pokemon-application select {
   margin: 1rem 0;
 }
+
 .pokemon-image {
   display: flex;
   flex-direction: column;
@@ -85,14 +93,14 @@ button:active {
   margin-bottom: 2rem;
   opacity: 0;
   animation: pokemon 1s forwards 0.2s;
-  
+
 }
 
 .pokemon-information {
   display: grid;
   grid-template-rows: 1fr, 1fr;
-  grid-template-areas: 
-  "pic name type height weight" "pic name type height weight"
+  grid-template-areas:
+    "pic name type height weight" "pic name type height weight"
   ;
   justify-items: center;
   align-items: center;
@@ -101,7 +109,7 @@ button:active {
   border-radius: 15px;
   color: #cad6c2;
   opacity: 0;
-  animation: pokemon 1s  0.5s   forwards;
+  animation: pokemon 1s 0.5s forwards;
 }
 
 .pokemon-information img {
@@ -111,15 +119,17 @@ button:active {
   height: 80px;
   justify-self: center;
 }
+
 #info-namn {
   grid-area: name;
   grid-row: 2;
 }
 
 #height {
-  grid-area: height ;
+  grid-area: height;
   grid-row: 2;
 }
+
 .pokemon-information ul {
   grid-area: type;
   grid-row: 2;
@@ -127,25 +137,32 @@ button:active {
   padding: 0;
   margin: 0;
 }
+
 #weight {
   grid-area: weight;
-  grid-row:2;
+  grid-row: 2;
 }
-.info, .rubrik-info{
+
+.info,
+.rubrik-info {
   margin: 0.5rem 0;
 }
+
 .info {
   font-size: 1.5rem;
-  
+
 }
+
 .rubrik-info {
   font-size: 1.7rem;
-  
+
 }
+
 #pokemon-bild {
   width: 20vw;
   height: 20vw;
 }
+
 footer {
   text-align: center;
   padding: 1rem 0;
@@ -153,16 +170,19 @@ footer {
   color: #cad6c2;
   border-radius: 20px 20px 0 0;
   font-size: 1.2rem;
-  
-  
+
+
 }
+
 footer a {
   color: #cad6c2;
-  
+
 }
+
 footer a:hover {
   text-decoration: none;
 }
+
 .kontakt {
   list-style: none;
   display: flex;
@@ -172,80 +192,100 @@ footer a:hover {
 
 /* Animation */
 @keyframes pokemon {
-  0% {opacity: 0%;}
-  100%{opacity: 1;}
+  0% {
+    opacity: 0%;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
+
 /* MEDIA QUERIES */
 /* Mobiltelefon */
-@media (max-width: 768px )  {
-  
+@media (max-width: 768px) {
+
   h2 {
     font-size: 2rem;
   }
+
   h3 {
     font-size: 1.5rem;
   }
+
   h4 {
     font-size: 1rem;
   }
-  p {font-size: 1.25rem;} 
+
+  p {
+    font-size: 1.25rem;
+  }
 
   .pokemon-information {
-    
-  grid-template-rows: repeat(5, 1fr);
-  grid-template-areas: 
-   "pic pic" "name name" "type type" "height height" "weight weight" 
-   ;
-   
-}
-.pokemon-information img {
-  grid-area: pic;
-  grid-column: 2;
-  width: 90px;
-  height: 90px;
-  
-}
-#info-namn {
-  grid-area: name;
-  grid-column: 2;
+
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas:
+      "pic pic" "name name" "type type" "height height" "weight weight"
+    ;
+
+  }
+
+  .pokemon-information img {
+    grid-area: pic;
+    grid-column: 2;
+    width: 90px;
+    height: 90px;
+
+  }
+
+  #info-namn {
+    grid-area: name;
+    grid-column: 2;
+  }
+
+  #height {
+    grid-area: height;
+    grid-column: 2;
+  }
+
+  .pokemon-information ul {
+    grid-area: type;
+    grid-column: 2;
+
+  }
+
+  #weight {
+    grid-area: weight;
+    grid-column: 2;
+  }
+
+
+  #pokemon-bild {
+    width: 35vw;
+    height: 35vh;
+  }
+
+  button {
+    font-size: 1rem;
+  }
+
+  select {
+    font-size: 1.15rem;
+  }
 }
 
-#height {
-  grid-area: height ;
-  grid-column: 2;
-}
-.pokemon-information ul {
-  grid-area: type;
-  grid-column: 2;
-  
-}
-#weight {
-  grid-area: weight;
-  grid-column: 2;
-}
-
-
-#pokemon-bild {
-width: 35vw;
-height: 35vh;
-}
-button {
-font-size: 1rem;
-}
-select {
-font-size: 1.15rem;
-}
-}
 @media (min-width: 769px) and (max-width: 1248px) {
   #pokemon-bild {
     margin-bottom: 2rem;
     width: 35vw;
     height: 35vh;
   }
+
   button {
-  font-size: 0.9rem;
+    font-size: 0.9rem;
   }
+
   select {
-  font-size: 1rem;
+    font-size: 1rem;
   }
 }
