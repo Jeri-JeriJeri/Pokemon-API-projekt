@@ -29,9 +29,7 @@ function PokemonApplication({ pokemon }) {
                 <button onClick={getUrl}>Show info:</button>
             </div>
 
-            {pokemonData &&
-
-                <Pokemon props={pokemonData} />}
+            {pokemonData && <Pokemon pokemon={pokemonData} /> }
         </>
 
 
