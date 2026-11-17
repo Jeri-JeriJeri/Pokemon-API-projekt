@@ -60,14 +60,15 @@ button {
 }
 
 button {
-  transition: padding 0.7s ease, border-radius 0.7s ease;
+  transition: padding 0.7s ease, border-radius 0.7s ease, border 0.7s ease;
 
 
 }
 
-button:hover {
+button:hover, button:focus {
   padding: 0.6rem;
   border-radius: 20px;
+  border: 2px white solid;
 }
 
 button:active {
