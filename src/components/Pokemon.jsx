@@ -13,7 +13,7 @@ const storBokstavNamn = props.name.charAt(0).toUpperCase() + props.name.slice(1)
            <h4 className="rubrik-height rubrik-info">Height</h4>
            <h4 className="rubrik-weight rubrik-info">Weight</h4>
            
-            <h3 className="info"> {storBokstavNamn} </h3>
+            <p className="info" id="info-namn"> {storBokstavNamn} </p>
             
             {/* Vikten och löngden i PokeAPI mäts i hektogram och decimeter */}
             <span id="weight" className="info">{Number(props.weight) / 10}kg</span>

@@ -1,5 +1,7 @@
 /* KVAR ATT GÖRA::  
 Media queries för mobile och Tablett
+
+Use effect i pokemonapplication
 */
 
 * {
@@ -25,8 +27,20 @@ main {
 }
 
 h1 {
+  font-size: 3rem;
   text-align: center;
 }
+h2 {
+  font-size: 2.25rem;
+}
+h3 {
+  font-size: 1.75rem;
+}
+h4 {
+  font-size: 1.5rem;
+}
+p {font-size: 1.25rem;}
+
 
 select, button {
   background-color: #2A3230;
@@ -34,14 +48,17 @@ select, button {
   padding: 0.3rem;
   border-radius: 8px;
   border: 2px solid black;
+  font-size: 1rem;
 }
 .start-knapp {
   display: flex;
   justify-self: center;
 }
-button {
-  transition: padding 0.5s ease, border-radius 0.5s ease;
 
+button {
+  transition: padding 0.7s ease, border-radius 0.7s ease;
+
+  
 }
 button:hover {
   padding: 0.6rem;
@@ -67,7 +84,7 @@ button:active {
   align-items: center;
   margin-bottom: 2rem;
   opacity: 0;
-  animation: pokemon 1s forwards;
+  animation: pokemon 1s forwards 0.2s;
   
 }
 
@@ -94,7 +111,7 @@ button:active {
   height: 80px;
   justify-self: center;
 }
-.pokemon-information h3 {
+#info-namn {
   grid-area: name;
   grid-row: 2;
 }
@@ -126,8 +143,8 @@ button:active {
   
 }
 #pokemon-bild {
-  width: 15%;
-  height: 15%;
+  width: 20vw;
+  height: 20vw;
 }
 footer {
   text-align: center;
@@ -157,4 +174,78 @@ footer a:hover {
 @keyframes pokemon {
   0% {opacity: 0%;}
   100%{opacity: 1;}
+}
+/* MEDIA QUERIES */
+/* Mobiltelefon */
+@media (max-width: 768px )  {
+  
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  p {font-size: 1.25rem;} 
+
+  .pokemon-information {
+    
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-areas: 
+   "pic pic" "name name" "type type" "height height" "weight weight" 
+   ;
+   
+}
+.pokemon-information img {
+  grid-area: pic;
+  grid-column: 2;
+  width: 90px;
+  height: 90px;
+  
+}
+#info-namn {
+  grid-area: name;
+  grid-column: 2;
+}
+
+#height {
+  grid-area: height ;
+  grid-column: 2;
+}
+.pokemon-information ul {
+  grid-area: type;
+  grid-column: 2;
+  
+}
+#weight {
+  grid-area: weight;
+  grid-column: 2;
+}
+
+
+#pokemon-bild {
+width: 35vw;
+height: 35vh;
+}
+button {
+font-size: 1rem;
+}
+select {
+font-size: 1.15rem;
+}
+}
+@media (min-width: 769px) and (max-width: 1248px) {
+  #pokemon-bild {
+    margin-bottom: 2rem;
+    width: 35vw;
+    height: 35vh;
+  }
+  button {
+  font-size: 0.9rem;
+  }
+  select {
+  font-size: 1rem;
+  }
 }
