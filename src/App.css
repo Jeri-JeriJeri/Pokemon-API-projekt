@@ -1,3 +1,7 @@
+/* Att göra:
+Varje 2-4 sek flip från frontGif till backGif
+via setInterval?
+*/
 * {
   box-sizing: border-box;
 }

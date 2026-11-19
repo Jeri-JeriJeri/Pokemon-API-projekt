@@ -1,9 +1,24 @@
+import { useState } from "react"
+
 function Pokemon({ pokemon }) {
     const storBokstavNamn = pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)
 
+    const frontGif = pokemon.sprites.other.showdown.front_default
+    const backGif = pokemon.sprites.other.showdown.back_default
+
+    const [gif, setGif] = useState(true)
+
+    function flip () {
+        setGif(!gif)
+    }
+    function timer () {
+    setInterval(flip, 2500)}
+    
+    timer()
     return (<>
         <div className="pokemon-image">
             <h2>{storBokstavNamn}</h2>
+            
             <img src={pokemon.sprites.other.dream_world.front_default} alt={`Bild på ${pokemon.name}`} id="pokemon-bild" />
         </div>
         <div className="pokemon-information">
@@ -20,8 +35,9 @@ function Pokemon({ pokemon }) {
 
             <span id="height" className="info"> {Number(pokemon.height) / 10}m</span>
 
-            <img src={pokemon.sprites.other.showdown.front_default} className="info" alt={`Animerade GIF av ${pokemon.name}`} />
-
+            <img src={gif ? frontGif : backGif} className="info" alt={`Animerade GIF av ${pokemon.name}`} />
+            {/* <img src={frontGif} className="info" alt={`Animerade GIF av ${pokemon.name}`} />
+ */}
             <ul className="info">
                 {pokemon.types.map((item, i) => <li className="type" key={item.slot}>{i + 1}. {
                     item.type.name.charAt(0).toUpperCase() + item.type.name.slice(1)
