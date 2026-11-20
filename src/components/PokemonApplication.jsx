@@ -15,11 +15,11 @@ function PokemonApplication({ pokemon }) {
     return (
         <>
             <div className="pokemon-application">
-                <h2>Välj din Pokemon</h2>
+                <h2>Choose Your Pokemon!</h2>
 
                 <select onChange={(e) => setSelectedPokemon(e.target.value)}>
 
-                    <option value="">Välj din pokemon</option>
+                    <option value="">Choose</option>
                     {pokemon.results.map((item, i) => (
                         <option key={i} value={item.url}>
                             {/* Kan inte skapa variabel eller funktion för att få stor bokstav som kommer funka i .map scope */}
