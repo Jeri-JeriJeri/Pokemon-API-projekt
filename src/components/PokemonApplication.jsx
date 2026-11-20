@@ -10,10 +10,10 @@ function PokemonApplication({ pokemon }) {
         const json = await res.json();
         setPokemonData(json)
     }
-
-
+   
     return (
         <>
+        
             <div className="pokemon-application">
                 <h2>Choose Your Pokemon!</h2>
 
@@ -21,7 +21,7 @@ function PokemonApplication({ pokemon }) {
 
                     <option value="">Choose</option>
                     {pokemon.results.map((item, i) => {
-                     const storBokstav = item.name.charAt(0).toUpperCase() + item.name.slice(1); 
+                        const storBokstav = item.name.charAt(0).toUpperCase() + item.name.slice(1); 
                      return <option key={i} value={item.url}> {storBokstav} </option>
                     })}
                 </select>
@@ -29,6 +29,7 @@ function PokemonApplication({ pokemon }) {
             </div>
 
             {pokemonData && <Pokemon pokemon={pokemonData} /> }
+            
         </>
 
 

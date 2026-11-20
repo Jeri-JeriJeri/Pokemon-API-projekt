@@ -13,6 +13,9 @@ export default function Main () {
         setPokemon(json)
       }
     getData()}, [show] )
+    if (!pokemon) {
+      return "Laddar..."
+    }
     return ( 
         <main>
         <button className='start-knapp' onClick={() => setShow(!show)}>{show ? "Close" : "Start"} Pokemon App</button>
