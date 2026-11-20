@@ -20,11 +20,10 @@ function PokemonApplication({ pokemon }) {
                 <select onChange={(e) => setSelectedPokemon(e.target.value)}>
 
                     <option value="">Choose</option>
-                    {pokemon.results.map((item, i) => (
-                        <option key={i} value={item.url}>
-                            {/* Kan inte skapa variabel eller funktion för att få stor bokstav som kommer funka i .map scope */}
-                            {item.name.charAt(0).toUpperCase() + item.name.slice(1)}</option>
-                    ))}
+                    {pokemon.results.map((item, i) => {
+                     const storBokstav = item.name.charAt(0).toUpperCase() + item.name.slice(1); 
+                     return <option key={i} value={item.url}> {storBokstav} </option>
+                    })}
                 </select>
                 <button onClick={getUrl}>Show info:</button>
             </div>

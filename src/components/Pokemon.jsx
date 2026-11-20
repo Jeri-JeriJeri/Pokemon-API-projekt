@@ -23,9 +23,9 @@ function Pokemon({ pokemon }) {
             <img src={pokemon.sprites.other.showdown.front_default} className="info" alt={`Animerade GIF av ${pokemon.name}`} />
 
             <ul className="info">
-                {pokemon.types.map((item, i) => <li className="type" key={item.slot}>{i + 1}. {
-                    item.type.name.charAt(0).toUpperCase() + item.type.name.slice(1)
-                }</li>)}
+                {pokemon.types.map((item, i) =>{ 
+                    const storBokstavTypes = item.type.name.charAt(0).toUpperCase() + item.type.name.slice(1);
+                    return <li className="type" key={item.slot}>{i + 1}. {storBokstavTypes}</li>})}
 
             </ul>
         </div>
